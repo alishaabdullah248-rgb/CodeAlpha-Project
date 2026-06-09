@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASIO fx-991EX | CLASSWIZ Scientific Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="casio-container">
+        <div class="casio-calculator">
+            <!-- Top Brand Section -->
+            <div class="casio-header">
+                <div class="brand-section">
+                    <span class="casio-logo">CASIO</span>
+                    <span class="model-name">fx-991EX</span>
+                </div>
+                <div class="classwiz-badge">
+                    <span class="classwiz">CLASSWIZ</span>
+                    <i class="fas fa-qrcode"></i>
+                </div>
+            </div>
+
+            <!-- Solar Panel + Display -->
+            <div class="top-section">
+                <div class="solar-panel">
+                    <div class="solar-cell"></div>
+                    <div class="solar-cell"></div>
+                    <div class="solar-cell"></div>
+                </div>
+                <div class="display-area">
+                    <div class="display-mode-icons">
+                        <span id="modeIndicator">D</span>
+                        <span id="angleIndicator">RAD</span>
+                        <span id="mathIndicator" class="active">MATH</span>
+                        <span id="shiftIndicator">S</span>
+                        <span id="alphaIndicator">A</span>
+                    </div>
+                    <div class="main-display">
+                        <div class="expression-line" id="expression">0</div>
+                        <div class="result-line" id="result"></div>
+                    </div>
+                    <div class="display-stats">
+                        <span id="statInfo"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Function Keys Row -->
+            <div class="function-keys">
+                <div class="key-row">
+                    <button class="casio-key shift" data-shift="true">SHIFT</button>
+                    <button class="casio-key alpha" data-alpha="true">ALPHA</button>
+                    <button class="casio-key menu" data-func="setup">MENU SETUP</button>
+                    <button class="casio-key on" data-action="on">ON</button>
+                </div>
+                <div class="key-row">
+                    <button class="casio-key optn" data-func="optn">OPTN</button>
+                    <button class="casio-key solve" data-func="solve">SOLVE</button>
+                    <button class="casio-key calc" data-func="calc">CALC</button>
+                    <button class="casio-key qr" data-func="qr"><i class="fas fa-qrcode"></i> QR</button>
+                </div>
+            </div>
+
+            <!-- Main Keypad -->
+            <div class="keypad">
+                <!-- Row 1 -->
+                <div class="key-row">
+                    <button class="casio-key" data-func="power">x<sup>3</sup></button>
+                    <button class="casio-key" data-func="frac">▭/▭</button>
+                    <button class="casio-key" data-func="sqrt">√▭</button>
+                    <button class="casio-key" data-func="powerx">x<sup>▭</sup></button>
+                    <button class="casio-key" data-func="log">log</button>
+                    <button class="casio-key" data-func="ln">ln</button>
+                    <button class="casio-key" data-func="neg">(-)</button>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="key-row">
+                    <button class="casio-key" data-func="scientific">x10<sup>x</sup></button>
+                    <button class="casio-key" data-func="x10x">10<sup>x</sup></button>
+                    <button class="casio-key" data-func="ex">e<sup>x</sup></button>
+                    <button class="casio-key" data-func="abs">Abs</button>
+                    <button class="casio-key" data-func="fact">x!</button>
+                    <button class="casio-key" data-func="scientific">( )</button>
+                    <button class="casio-key alpha-func" data-alpha-char="A">A</button>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="key-row">
+                    <button class="casio-key" data-func="sin">sin</button>
+                    <button class="casio-key" data-func="cos">cos</button>
+                    <button class="casio-key" data-func="tan">tan</button>
+                    <button class="casio-key" data-func="sinh">sinh</button>
+                    <button class="casio-key" data-func="cosh">cosh</button>
+                    <button class="casio-key" data-func="tanh">tanh</button>
+                    <button class="casio-key alpha-func" data-alpha-char="B">B</button>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="key-row">
+                    <button class="casio-key" data-func="recall">RECALL</button>
+                    <button class="casio-key" data-func="eng">ENG</button>
+                    <button class="casio-key" data-func="assign">STO</button>
+                    <button class="casio-key" data-func="mminus">M-</button>
+                    <button class="casio-key" data-func="mplus">M+</button>
+                    <button class="casio-key" data-func="const">CONST</button>
+                    <button class="casio-key alpha-func" data-alpha-char="C">C</button>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="key-row">
+                    <button class="casio-key" data-func="conv">CONV</button>
+                    <button class="casio-key" data-func="reset">RESET</button>
+                    <button class="casio-key" data-func="ins">INS</button>
+                    <button class="casio-key off" data-action="off">OFF</button>
+                    <button class="casio-key" data-num="7">7</button>
+                    <button class="casio-key" data-num="8">8</button>
+                    <button class="casio-key" data-num="9">9</button>
+                </div>
+
+                <!-- Row 6 -->
+                <div class="key-row">
+                    <button class="casio-key" data-func="del">DEL</button>
+                    <button class="casio-key" data-action="clear">AC</button>
+                    <button class="casio-key" data-func="npr">nPr</button>
+                    <button class="casio-key" data-func="ncr">nCr</button>
+                    <button class="casio-key" data-num="4">4</button>
+                    <button class="casio-key" data-num="5">5</button>
+                    <button class="casio-key" data-num="6">6</button>
+                </div>
+
+                <!-- Row 7 -->
+                <div class="key-row">
+                    <button class="casio-key" data-func="pol">Pol</button>
+                    <button class="casio-key" data-func="rec">Rec</button>
+                    <button class="casio-key" data-op="*">×</button>
+                    <button class="casio-key" data-op="/">÷</button>
+                    <button class="casio-key" data-num="1">1</button>
+                    <button class="casio-key" data-num="2">2</button>
+                    <button class="casio-key" data-num="3">3</button>
+                </div>
+
+                <!-- Row 8 -->
+                <div class="key-row">
+                    <button class="casio-key" data-func="rnd">Rnd</button>
+                    <button class="casio-key" data-func="rand">Ran#</button>
+                    <button class="casio-key" data-op="-">−</button>
+                    <button class="casio-key" data-op="+">+</button>
+                    <button class="casio-key" data-num="0">0</button>
+                    <button class="casio-key" data-num=".">.</button>
+                    <button class="casio-key equals" data-action="equals">=</button>
+                </div>
+            </div>
+
+            <!-- Bottom Labels -->
+            <div class="casio-footer">
+                <div class="base-labels">
+                    <span>DEC</span>
+                    <span>HEX</span>
+                    <span>BIN</span>
+                    <span>OCT</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
